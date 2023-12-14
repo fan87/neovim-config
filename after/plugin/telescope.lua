@@ -5,9 +5,12 @@ require('telescope').setup({
         }
     },
     pickers = {
+        live_grep = {
+            theme = "dropdown"
+        },
         find_files = {
             theme = "dropdown",
             hidden = true
-        }
+        } 
     }    
 })

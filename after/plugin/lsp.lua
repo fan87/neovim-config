@@ -25,10 +25,12 @@ require('mason-lspconfig').setup({
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<C-y>'] = cmp.mapping.confirm({select = true}),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
+    ['<tab>'] = cmp.mapping.confirm({select = true}),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<esc>'] = cmp.mapping.abort(),
 
     -- Navigate between snippet placeholder
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
@@ -43,3 +45,5 @@ cmp.setup({
 require('lsp-notify').setup({
     notify = require('notify'),
 })
+
+

@@ -7,7 +7,8 @@ vim.g.mapleader = " "
 -- Toggle nerd tree using <Space>nt
 vim.keymap.set('n', '<Space>nt', function() vim.api.nvim_command('NERDTreeToggle') end)
 -- Fuzzy find using <Space>p
-vim.keymap.set('n', '<leader>p', telescope.find_files, {}) 
+vim.keymap.set('n', '<leader>p', telescope.find_files, {})
+vim.keymap.set('n', '<Space>f', telescope.live_grep, {})
 
 
 -- Harpoon Configuration
@@ -28,3 +29,7 @@ vim.keymap.set("n", "<leader>9", function() require("harpoon.ui").nav_file(9) en
 -- In visual mode, you can move lines up and down using J and K (uppercase)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "gd", function() telescope.lsp_definitions() end)
+vim.keymap.set("n", "gi", function() telescope.lsp_implementations() end)
+vim.keymap.set("n", "gr", function() telescope.lsp_references() end)

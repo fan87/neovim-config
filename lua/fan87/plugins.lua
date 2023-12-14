@@ -42,4 +42,5 @@ return function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'folke/neodev.nvim'
     use 'mrded/nvim-lsp-notify'
+    use 'linrongbin16/lsp-progress.nvim'
 end

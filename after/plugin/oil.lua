@@ -1,0 +1,12 @@
+-- require("oil").setup({
+--     columns = {
+--         "icon"
+--     },
+--     preview = {
+--         
+--     },
+--     view_options = {
+--         show_hidden = true
+--     }
+-- })
+

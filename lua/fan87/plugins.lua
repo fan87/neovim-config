@@ -43,4 +43,5 @@ return function(use)
     use 'folke/neodev.nvim'
     use 'mrded/nvim-lsp-notify'
     use 'linrongbin16/lsp-progress.nvim'
+    use 'wellle/targets.vim'
 end

@@ -44,4 +44,13 @@ return function(use)
     use 'mrded/nvim-lsp-notify'
     use 'linrongbin16/lsp-progress.nvim'
     use 'wellle/targets.vim'
+    use 'lambdalisue/suda.vim'
+    use 'windwp/nvim-autopairs'
+    use({
+        'ray-x/navigator.lua',
+        requires = {
+            { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+            { 'neovim/nvim-lspconfig' },
+        },
+    })
 end

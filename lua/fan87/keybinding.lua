@@ -28,8 +28,11 @@ vim.keymap.set("n", "<leader>9", function() require("harpoon.ui").nav_file(9) en
 
 -- In visual mode, you can move lines up and down using J and K (uppercase)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-3<CR>gv=gv")
 
 vim.keymap.set("n", "gd", function() telescope.lsp_definitions() end)
 vim.keymap.set("n", "gi", function() telescope.lsp_implementations() end)
 vim.keymap.set("n", "gr", function() telescope.lsp_references() end)
+
+vim.keymap.set("n", "Q", function() vim.lsp.buf.signature_help() end)
+vim.keymap.set("n", "<Space>rn", function() vim.lsp.buf.rename(vim.fn.input('Rename to: ')) end)

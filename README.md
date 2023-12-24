@@ -19,6 +19,7 @@ This README may not be up-to-date
 - Visual Mode, `K` - Move selection line down
 
 - For Auto Complete keys, check lsp.lua
+- And everything in https://github.com/ray-x/navigator.lua
 
 ### Commands
 - `:lua vim.notify("Hello, World!")` - `nvim-notify`

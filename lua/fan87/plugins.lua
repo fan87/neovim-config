@@ -1,4 +1,6 @@
 return function(use)
+    use 'wbthomason/packer.nvim'
+    use 'b0o/schemastore.nvim'
     use 'ThePrimeagen/vim-be-good'              -- Vim practice plugin
     use 'airblade/vim-gitgutter'                -- Git mark
     use 'navarasu/onedark.nvim'                 -- Onedark color scheme
@@ -53,4 +55,8 @@ return function(use)
             { 'neovim/nvim-lspconfig' },
         },
     })
+    use 'machakann/vim-highlightedyank'
+    use 'tpope/vim-commentary'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'MunifTanjim/prettier.nvim'
 end

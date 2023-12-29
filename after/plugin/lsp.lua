@@ -1,8 +1,14 @@
-local lspconfig = require('lspconfig')
 local cmp = require('cmp')
-local mason = require('mason')
 local cmp_action = require('lsp-zero').cmp_action()
-local lsp_zero = require('lsp-zero')
+
+require('lspconfig').jsonls.setup {
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
 
 require("neodev").setup()
 cmp.setup()

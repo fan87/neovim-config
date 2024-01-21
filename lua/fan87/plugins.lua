@@ -59,4 +59,11 @@ return function(use)
     use 'tpope/vim-commentary'
     use 'norcalli/nvim-colorizer.lua'
     use 'MunifTanjim/prettier.nvim'
+    use 'google/vim-maktaba'
+    use 'bazelbuild/vim-bazel'
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+    use 'tamago324/nlsp-settings.nvim'
 end

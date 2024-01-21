@@ -10,7 +10,9 @@ vim.g.mapleader = " "
 ---- n - reserved for nerdtree actions
 -- Toggle nerd tree using <Space>nt
 vim.keymap.set('n', '<Space>nt', function() vim.api.nvim_command('NERDTreeToggle') end)
-
+vim.keymap.set("n", "<Space>no", function ()
+    require("oil").open_float()
+end)
 ---- p, g, a, e, 1 ~ 9 - reserved for quick/common actions
 -- Fuzzy find using <Space>p
 vim.keymap.set('n', '<leader>p', telescope.find_files, {})
@@ -45,3 +47,6 @@ vim.keymap.set("n", "<Space>rn", function() vim.lsp.buf.rename(vim.fn.input('Ren
 vim.keymap.set("v", "<C-_>", ":Commentary<Cr>")
 vim.keymap.set("n", "<C-_>", ":Commentary<Cr><Cr>")
 vim.keymap.set("t", "<C-S-C>", "<C-\\><C-N>")
+
+
+

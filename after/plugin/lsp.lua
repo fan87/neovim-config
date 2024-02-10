@@ -1,24 +1,40 @@
-local lspconfig = require('lspconfig')
 local cmp = require('cmp')
-local mason = require('mason')
 local cmp_action = require('lsp-zero').cmp_action()
-local lsp_zero = require('lsp-zero')
+
+require('lspconfig').jsonls.setup {
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
+
+
+vim.filetype.add({
+    filename = {
+        ["build.fandiful.ts"] = "fandibuild",
+    }
+})
+vim.treesitter.language.register("typescript", "fandibuild")
+require("lspconfig.configs").fandibuild = require("fandibuild")
+require("lspconfig").fandibuild.setup {}
+require("lspconfig").denols.setup {
+    settings = {
+        deno = {
+            lint = true,
+            unstable = true,
+        }
+    }
+}
 
 require("neodev").setup()
+cmp.setup()
 
-lsp_zero.preset("recommended")
-lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
-end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {},
-  handlers = {
-    lsp_zero.default_setup,
-  }
 })
 
 

@@ -1,4 +1,6 @@
 return function(use)
+    use 'wbthomason/packer.nvim'
+    use 'b0o/schemastore.nvim'
     use 'ThePrimeagen/vim-be-good'              -- Vim practice plugin
     use 'airblade/vim-gitgutter'                -- Git mark
     use 'navarasu/onedark.nvim'                 -- Onedark color scheme
@@ -44,4 +46,24 @@ return function(use)
     use 'mrded/nvim-lsp-notify'
     use 'linrongbin16/lsp-progress.nvim'
     use 'wellle/targets.vim'
+    use 'lambdalisue/suda.vim'
+    use 'windwp/nvim-autopairs'
+    use({
+        'ray-x/navigator.lua',
+        requires = {
+            { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+            { 'neovim/nvim-lspconfig' },
+        },
+    })
+    use 'machakann/vim-highlightedyank'
+    use 'tpope/vim-commentary'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'MunifTanjim/prettier.nvim'
+    use 'google/vim-maktaba'
+    use 'bazelbuild/vim-bazel'
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+    use 'tamago324/nlsp-settings.nvim'
 end

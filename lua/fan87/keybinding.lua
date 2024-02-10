@@ -33,3 +33,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "gd", function() telescope.lsp_definitions() end)
 vim.keymap.set("n", "gi", function() telescope.lsp_implementations() end)
 vim.keymap.set("n", "gr", function() telescope.lsp_references() end)
+
+
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
